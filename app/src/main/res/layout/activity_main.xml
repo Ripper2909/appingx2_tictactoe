@@ -7,13 +7,40 @@
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
+    <ImageView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:srcCompat="@drawable/img_tictactoe"
+            android:id="@+id/img_tictactoe"
+            android:contentDescription="@string/img_tictactoe"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/horizontal_guideline"/>
+    <android.support.constraint.Guideline
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/horizontal_guideline"
+            app:layout_constraintGuide_percent="0.5"/>
+    <TextView
+            android:text="@string/text_title_tictactoe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_title_tictactoe"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_guideline"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:typeface="serif" android:textSize="30sp" android:textColor="@android:color/holo_green_dark"
+            android:textStyle="bold|italic" android:fontFamily="sans-serif"/>
+    <TextView
+            android:text="@string/text_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_description"
+            app:layout_constraintTop_toBottomOf="@id/text_title_tictactoe"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"/>
 </android.support.constraint.ConstraintLayout>

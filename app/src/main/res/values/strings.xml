@@ -1,3 +1,6 @@
 <resources>
-    <string name="app_name">appingx2_tictactoe</string>
+    <string name="app_name">Tic Tac Toe</string>
+    <string name="img_tictactoe">Tic Tac Toe</string>
+    <string name="text_title_tictactoe">Tic Tac Toe</string>
+    <string name="text_description">One app, one game. Made by Theodore Guillot for Android exam on Dec 3rd.</string>
 </resources>
