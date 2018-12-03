@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), View.OnClickListener {
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             when (clickedView.id) {
                 R.id.button_start -> {
                     goToSecondActivity()
-                    Log.d("MainActivity/TextCount", "text_count increased")
+                    Log.d("MainActivity", "Going to SecondActivity")
                 }
                 else -> {
                     Log.d("MainActivity", "onClick -> clickedView -> else reached")
@@ -31,9 +32,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     private fun goToSecondActivity() {
+        val playerName = findViewById<TextView>(R.id.plain_text_name)
         val explicitIntent = Intent(this, SecondActivity::class.java)
-        val message = "Hello from another world"
-        explicitIntent.putExtra("MESSAGE", message)
+        val name = playerName.text.toString()
+        explicitIntent.putExtra("NAME", name)
         startActivity(explicitIntent)
     }
 }

@@ -9,4 +9,8 @@
     <string name="button_start">START</string>
     <string name="img_epita">EPITA</string>
     <string name="text_made_at">Made at</string>
+    <string name="text_player_turn_1">Player turn :</string>
+    <string name="text_player_turn_2">Player turn :</string>
+    <string name="text_guest">X (Guest)</string>
+    <string name="text_player">O (Player)</string>
 </resources>
